@@ -1,6 +1,6 @@
 /* ============================================
 I2Cdev device library code is placed under the MIT license
-Copyright (c) 2020 Barrett Rose
+Copyright (c) 2012 Jeff Rowberg
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal

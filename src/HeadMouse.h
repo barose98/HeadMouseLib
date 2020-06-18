@@ -5,7 +5,7 @@
  *      Author: Barrett Rose
  */
 /* ============================================
-I2Cdev device library code is placed under the MIT license
+HeadMouseLib device library code is placed under the MIT license
 Copyright (c) 2020 Barrett Rose
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
