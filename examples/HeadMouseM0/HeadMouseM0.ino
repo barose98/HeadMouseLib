@@ -1,3 +1,31 @@
+/* ============================================
+I2Cdev device library code is placed under the MIT license
+Copyright (c) 2020 Barrett Rose
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+THE SOFTWARE.
+===============================================
+*/
+/**
+This sketch uses Jeff Rowberg's I2CDevLib and relies heavily on his DMP6 example sketch. Please see: 
+https://github.com/jrowberg/i2cdevlib/blob/master/Arduino/MPU6050/examples/MPU6050_DMP6/MPU6050_DMP6.ino
+ 
+*/
 #include "I2Cdev.h"
 #include "MPU6050_6Axis_MotionApps20.h"
 #include "HeadMouse.h"
@@ -14,7 +42,6 @@
 #endif
 
 MPU6050 mpu;
-//HeadMouse headmouse;
 #define OUTPUT_READABLE_YAWPITCHROLL
 
 bool dmpReady = false;  // set true if DMP init was successful
@@ -56,19 +83,9 @@ void setup() {
     mpu.setZeroMotionDetectionThreshold(0 );
     mpu.setZeroMotionDetectionDuration(640000);
 
-    //      mpu.setIntDMPEnabled(false);
     delay(1000);
   } 
-/*  else {
-    // ERROR!
-    // 1 = initial memory load failed
-    // 2 = DMP configuration updates failed
-    // (if it's going to break, usually the code will be 1)
-        digitalWrite(LEDPIN, HIGH);        
-        delay(10000);             
-        digitalWrite(LEDPIN, LOW);  
-  }
-*/
+
 
 }
 
